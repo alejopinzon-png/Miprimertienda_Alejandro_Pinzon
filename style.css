@@ -1,0 +1,205 @@
+:root {
+  --bg: #0d0d1a;
+  --card: #1a1a2e;
+  --card-border: #2e2e52;
+  --texto: #e6e6ff;
+  --texto-suave: #9a9acb;
+  --neon-cyan: #00f5d4;
+  --neon-rosa: #ff00cc;
+  --neon-morado: #7b2ff7;
+  --peligro: #ff3860;
+}
+
+body {
+  font-family: system-ui, Arial, sans-serif;
+  background: radial-gradient(circle at top, #1b1740 0%, var(--bg) 60%);
+  background-attachment: fixed;
+  color: var(--texto);
+  padding: 20px;
+  margin: 0;
+  text-align: center;
+}
+
+h1 {
+  color: #fff;
+  margin-bottom: 8px;
+  text-shadow: 0 0 10px var(--neon-cyan), 0 0 25px var(--neon-cyan);
+}
+
+.slogan {
+  color: var(--texto-suave);
+  font-size: 17px;
+  margin-top: 0;
+  margin-bottom: 25px;
+  letter-spacing: 1px;
+}
+
+/* Beneficios de la tienda */
+
+.beneficios {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+
+  background: linear-gradient(90deg, #14143a, #2a1450, #14143a);
+  color: var(--neon-cyan);
+  border-top: 1px solid var(--neon-cyan);
+  border-bottom: 1px solid var(--neon-rosa);
+  box-shadow: 0 0 15px rgba(0, 245, 212, 0.25);
+
+  padding: 14px;
+  margin-bottom: 30px;
+}
+
+.beneficios span {
+  font-size: 14px;
+  font-weight: 600;
+}
+
+/* Catálogo */
+
+#productos {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.producto {
+  border: 1px solid var(--card-border);
+  background: var(--card);
+  border-radius: 10px;
+  padding: 10px;
+  width: 220px;
+  vertical-align: top;
+  transition: transform 0.2s, box-shadow 0.2s, border-color 0.2s;
+}
+
+.producto:hover {
+  transform: translateY(-6px);
+  border-color: var(--neon-cyan);
+  box-shadow: 0 0 18px rgba(0, 245, 212, 0.45);
+}
+
+.producto img {
+  width: 100%;
+  height: 140px;
+  object-fit: cover;
+  border-radius: 6px;
+}
+
+.producto h3 {
+  margin-bottom: 8px;
+  color: #fff;
+}
+
+.descripcion {
+  font-size: 14px;
+  color: var(--texto-suave);
+  min-height: 42px;
+}
+
+.precio {
+  font-size: 18px;
+  font-weight: bold;
+  color: var(--neon-cyan);
+  text-shadow: 0 0 8px rgba(0, 245, 212, 0.6);
+}
+
+/* Botones */
+
+.producto button {
+  background: linear-gradient(90deg, var(--neon-morado), var(--neon-rosa));
+  border: none;
+  color: white;
+  font-weight: 600;
+  padding: 9px 14px;
+  margin-top: 5px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: box-shadow 0.2s, transform 0.2s;
+}
+
+.producto button:hover {
+  box-shadow: 0 0 14px var(--neon-rosa);
+  transform: scale(1.05);
+}
+
+/* Carrito */
+
+.carrito {
+  margin-top: 35px;
+  padding: 20px;
+  background: var(--card);
+  border: 1px solid var(--neon-morado);
+  box-shadow: 0 0 20px rgba(123, 47, 247, 0.4);
+  border-radius: 10px;
+  text-align: left;
+  display: inline-block;
+  min-width: 320px;
+}
+
+.carrito h2 {
+  margin-top: 0;
+  color: var(--neon-cyan);
+}
+
+#lista-carrito {
+  padding-left: 20px;
+}
+
+#lista-carrito li {
+  margin-bottom: 8px;
+}
+
+.resumen {
+  border-top: 1px solid var(--card-border);
+  margin-top: 15px;
+  padding-top: 10px;
+}
+
+.total {
+  font-size: 19px;
+  color: var(--neon-cyan);
+}
+
+/* Botón vaciar */
+
+.vaciar {
+  background: transparent;
+  border: 2px solid var(--peligro);
+  color: var(--peligro);
+  font-weight: 600;
+  padding: 7px 12px;
+  margin-top: 10px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s, box-shadow 0.2s;
+}
+
+.vaciar:hover {
+  background: var(--peligro);
+  color: #fff;
+  box-shadow: 0 0 14px var(--peligro);
+}
+
+/* Botón finalizar */
+
+.finalizar {
+  background: var(--neon-cyan);
+  border: 2px solid var(--neon-cyan);
+  color: #0d0d1a;
+  font-weight: 700;
+  padding: 7px 12px;
+  margin-top: 10px;
+  margin-left: 5px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: box-shadow 0.2s, transform 0.2s;
+}
+
+.finalizar:hover {
+  box-shadow: 0 0 16px var(--neon-cyan);
+  transform: scale(1.05);
+}
