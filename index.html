@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mi tienda</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header class="hero">
+    <h1 class="logo">🎮 Ale<span>Game</span>Steam</h1>
+    <p class="slogan">Tu próximo nivel empieza aquí 🕹️</p>
+  </header>
+
+  <style>
+    .hero {
+      text-align: center;
+      padding: 40px 20px;
+      background: linear-gradient(135deg, #0f0c29, #302b63, #24243e);
+      border-bottom: 4px solid #00f5d4;
+    }
+
+    .logo {
+      font-family: 'Segoe UI', Arial, sans-serif;
+      font-size: 3.2rem;
+      font-weight: 800;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      color: #ffffff;
+      text-shadow: 0 0 10px #00f5d4, 0 0 25px #00f5d4;
+      margin: 0;
+    }
+
+    .logo span {
+      background: linear-gradient(90deg, #ff00cc, #00f5d4);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+      text-shadow: none;
+    }
+
+    .slogan {
+      color: #b8b8ff;
+      font-size: 1.1rem;
+      margin-top: 10px;
+      letter-spacing: 1px;
+    }
+  </style>
+
+  <p class="slogan">
+    Los mejores juegos de la web a un clic de distancia 🎮
+  </p>
+
+  <div class="beneficios">
+    <span>🚚 Disponibilidad Mundial</span>
+    <span>🔒 Compra segura</span>
+    <span>📦 Seguimiento de compra</span>
+  </div>
+
+  <div id="productos"></div>
+
+  <div class="carrito">
+    <h2>🧾 Carrito de Compras</h2>
+
+    <ul id="lista-carrito"></ul>
+
+    <div class="resumen">
+    
+
+      <p class="total">
+        Total: $<span id="total">0</span>
+      </p>
+    </div>
+
+    <button class="vaciar" onclick="vaciarCarrito()">
+      🧼 Vaciar Carrito
+    </button>
+
+    <button class="finalizar" onclick="finalizarCompra()">
+      ✅ Finalizar Compra
+    </button>
+  </div>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
